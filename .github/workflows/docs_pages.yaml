@@ -6,28 +6,30 @@ on:
       - main 
 
 jobs:
-  build-and-deploy:
+  build-site:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
         with:
-          python-version: 3.12.1
+          node-version: '21.6.2'
 
       - name: Install dependencies
         run: |
-          pip install -r requirements.txt
+          npm install
 
       - name: Build Documentation
         run: |
-          sphinx-build -b html ./docs/source ./docs/build/html
+          npm run build
 
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./docs/build/html
+          publish_dir: ./build
