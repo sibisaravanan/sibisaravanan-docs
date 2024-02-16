@@ -25,6 +25,9 @@ jobs:
         run: |
           npm run build
 
+      - name: List build directory contents
+        run: ls -lah build
+
   deploy-site:
     runs-on: ubuntu-latest
     needs: build-site
