@@ -27,6 +27,7 @@ jobs:
 
   deploy-site:
     runs-on: ubuntu-latest
+    needs: build-site
     steps:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
