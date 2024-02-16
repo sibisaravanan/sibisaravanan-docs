@@ -3,7 +3,7 @@ name: Deploy Documentation to GitHub Pages
 on:
   push:
     branches:
-      - main 
+      - main
 
 jobs:
   build-site:
@@ -15,7 +15,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '21.6.2'
+          node-version: "21.6.2"
 
       - name: Install dependencies
         run: |
@@ -28,6 +28,12 @@ jobs:
       - name: List Build directory contents
         run: ls -lah build
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: build-artifact
+          path: build
+
   deploy-site:
     runs-on: ubuntu-latest
     needs: build-site
@@ -35,7 +41,7 @@ jobs:
       - name: Download build artifact
         uses: actions/download-artifact@v2
         with:
-          name: build-site
+          name: build-artifact
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
