@@ -27,8 +27,8 @@ jobs:
 
       - name: Add CNAME file to build directory
         run: |
-          touch CNAME
-          echo 'docs.sibisaravanan.com' > CNAME
+          touch ./build/CNAME
+          echo 'docs.sibisaravanan.com' > ./build/CNAME
 
       - name: List Build directory contents
         run: ls -lah build
