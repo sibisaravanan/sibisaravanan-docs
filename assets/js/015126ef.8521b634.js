@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_sibisaravanan_com=self.webpackChunkdocs_sibisaravanan_com||[]).push([[373],{9978:a=>{a.exports=JSON.parse('{"label":"AWS","permalink":"/blog/tags/aws","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_sibisaravanan_com=self.webpackChunkdocs_sibisaravanan_com||[]).push([[4789],{6066:a=>{a.exports=JSON.parse('{"permalink":"/blog/tags/grafanna","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);

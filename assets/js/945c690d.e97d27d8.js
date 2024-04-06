@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_sibisaravanan_com=self.webpackChunkdocs_sibisaravanan_com||[]).push([[8363],{1760:s=>{s.exports=JSON.parse('{"label":"SSO","permalink":"/blog/tags/sso","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

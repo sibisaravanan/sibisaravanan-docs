@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_sibisaravanan_com=self.webpackChunkdocs_sibisaravanan_com||[]).push([[919],{3519:a=>{a.exports=JSON.parse('{"label":"monitoring","permalink":"/blog/tags/monitoring","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);

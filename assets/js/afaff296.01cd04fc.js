@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkdocs_sibisaravanan_com=self.webpackChunkdocs_sibisaravanan_com||[]).push([[7538],{4185:s=>{s.exports=JSON.parse('{"label":"AWS SSO","permalink":"/blog/tags/aws-sso","allTagsPath":"/blog/tags","count":1,"unlisted":false}')}}]);
