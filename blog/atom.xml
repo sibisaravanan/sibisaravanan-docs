@@ -29,6 +29,83 @@
         <id>https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso</id>
         <link href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso"/>
         <updated>2020-11-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[aws-sso-workflow]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="aws-sso-workflow" src="https://docs.sibisaravanan.com/assets/images/aws-sso-workflow-eb6c1d2876e1842592b2a48add659869.avif" width="639" height="561" class="img_ev3q"></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="hassle-free-access-management-with-aws-single-sign-on-sso">Hassle-free access management with AWS Single Sign-on (SSO)<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#hassle-free-access-management-with-aws-single-sign-on-sso" class="hash-link" aria-label="Direct link to Hassle-free access management with AWS Single Sign-on (SSO)" title="Direct link to Hassle-free access management with AWS Single Sign-on (SSO)">​</a></h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="introduction">Introduction<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#introduction" class="hash-link" aria-label="Direct link to Introduction" title="Direct link to Introduction">​</a></h3>
+<p>AWS Single Sign-on is a single sign-on access providing service by Amazon web Services. AWS SSO allows you to access multiple AWS accounts and other Business applications just with a single access credential having them centrally managed. One of the painful processes is having to maintain several different access credentials and remembering which key is for which service. And this is where AWS SSO comes into the picture. How nice and convenient would it be if we could open multiple locked doors with the same key, eliminating the hassle of maintaining a bunch of different keys? Let’s deep dive and look into more interesting things you could do with the AWS SSO service.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="lets-get-started">Let’s get started<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#lets-get-started" class="hash-link" aria-label="Direct link to Let’s get started" title="Direct link to Let’s get started">​</a></h3>
+<p>You can access AWS SSO right from the <a href="https://us-east-1.signin.aws.amazon.com/oauth?response_type=code&amp;client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&amp;redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fnc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgs%2523%26isauthcode%3Dtrue&amp;forceMobileLayout=0&amp;forceMobileApp=0&amp;code_challenge=DNJywQV_kbc352eXdBUUtFCq6xlBx1YeYX737H8RkbY&amp;code_challenge_method=SHA-256" target="_blank" rel="noopener noreferrer">AWS Management Console</a>. The AWS Organisation Administrator can configure permissions and access controls for all the AWS accounts and users centrally without any complexity. Since all this work can be done in a single dashboard-like user portal, it eliminates the work of setting up the configurations manually on each account.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="creating-and-managing-user-identities-in-aws-sso">Creating and managing user identities in AWS SSO<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#creating-and-managing-user-identities-in-aws-sso" class="hash-link" aria-label="Direct link to Creating and managing user identities in AWS SSO" title="Direct link to Creating and managing user identities in AWS SSO">​</a></h3>
+<p>The AWS Organization Administrator can create new identities for individual users and even user groups within the AWS SSO user portal and manage them centrally all in one place. The AWS SSO also provides the facility of connecting existing user identities from third-party external user directories with the AWS SSO user directory. They include</p>
+<ul>
+<li>Microsoft Active Directory</li>
+<li>Okta Universal Directory</li>
+<li>Azure AD</li>
+</ul>
+<p>And many more supported identity providers. <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/supported-idps.html" target="_blank" rel="noopener noreferrer">Click here to learn more</a>. You can also automate this process of granting users and user groups permissions by using <em>API</em>s and <em>AWS Cloudformation</em> service.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="auto-sync-identities-from-other-directories">Auto-sync identities from other directories<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#auto-sync-identities-from-other-directories" class="hash-link" aria-label="Direct link to Auto-sync identities from other directories" title="Direct link to Auto-sync identities from other directories">​</a></h3>
+<p>After integrating user identities from any of the external directories mentioned above, user identities are automatically synchronized from those directories. This means whenever new identities are created or changes are made to the existing identities, it automatically gets reflected in the AWS SSO dashboard, eliminating the need for manual periodic synchronizations.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="built-in-integrations-for-other-business-applications">Built-in integrations for other business applications<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#built-in-integrations-for-other-business-applications" class="hash-link" aria-label="Direct link to Built-in integrations for other business applications" title="Direct link to Built-in integrations for other business applications">​</a></h3>
+<p>AWS SSO not only allows us to grant access to AWS accounts and services but also supports other business applications. To mention a few popular ones,</p>
+<ul>
+<li>Atlassian</li>
+<li>Dropbox</li>
+<li>Github</li>
+<li>G Suite</li>
+<li>Office365</li>
+<li>Salesforce</li>
+<li>Slack</li>
+</ul>
+<p>Many more pre-integrated applications can be found here. <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/saasapps.html#saasapps-supported" target="_blank" rel="noopener noreferrer">Click to view</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="steps-to-setup-aws-sso-in-the-management-console">Steps to setup AWS SSO in the Management Console<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#steps-to-setup-aws-sso-in-the-management-console" class="hash-link" aria-label="Direct link to Steps to setup AWS SSO in the Management Console" title="Direct link to Steps to setup AWS SSO in the Management Console">​</a></h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="step-1-enable-aws-sso">Step 1: Enable AWS SSO<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#step-1-enable-aws-sso" class="hash-link" aria-label="Direct link to Step 1: Enable AWS SSO" title="Direct link to Step 1: Enable AWS SSO">​</a></h4>
+<ul>
+<li>Log in to your <a href="https://us-east-1.signin.aws.amazon.com/oauth?response_type=code&amp;client_id=arn%3Aaws%3Aiam%3A%3A015428540659%3Auser%2Fhomepage&amp;redirect_uri=https%3A%2F%2Fconsole.aws.amazon.com%2Fconsole%2Fhome%3Fnc2%3Dh_ct%26src%3Dheader-signin%26state%3DhashArgs%2523%26isauthcode%3Dtrue&amp;forceMobileLayout=0&amp;forceMobileApp=0&amp;code_challenge=DNJywQV_kbc352eXdBUUtFCq6xlBx1YeYX737H8RkbY&amp;code_challenge_method=SHA-256" target="_blank" rel="noopener noreferrer">AWS Management Console</a> on your favourite browser.</li>
+<li>Search for AWS Single sign-on in AWS Services.</li>
+<li>Make sure you have an AWS Organization setup. If not, click <em>“Create AWS Organization”</em> to set one up.</li>
+<li>After setting up an organization, Click <em>“Enable AWS SSO”</em> as shown below.</li>
+</ul>
+<p><img decoding="async" loading="lazy" alt="step-1.png" src="https://docs.sibisaravanan.com/assets/images/step-1-7732e8e87f0690377e9136193abb94ab.png" width="700" height="351" class="img_ev3q"></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="step-2-select-the-source-of-identity">Step 2: Select the source of Identity<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#step-2-select-the-source-of-identity" class="hash-link" aria-label="Direct link to Step 2: Select the source of Identity" title="Direct link to Step 2: Select the source of Identity">​</a></h4>
+<p>The AWS SSO store holds the identities of the users that are needed to be given access. You are also given the option to choose from the list of <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/supported-idps.html" target="_blank" rel="noopener noreferrer">supported external identity providers</a> as the source of identity. As discussed earlier the AWS SSO also provides automatic synchronization of users from those external sources as well.</p>
+<p><img decoding="async" loading="lazy" alt="step-2.png" src="https://docs.sibisaravanan.com/assets/images/step-2-8701e1507a532cb4e4c99e9744dbfeee.png" width="700" height="450" class="img_ev3q"></p>
+<p>After adding users, they appear as a list of authenticated users. Now you can assign specific permissions to each user individually or put together a bunch of users as a user group and assign permissions to that group.</p>
+<p>Here is a guide for setting up a few popular external identities:</p>
+<ul>
+<li><em>AWS SSO Store</em> - <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-sso.html" target="_blank" rel="noopener noreferrer">managing user identities in default AWS SSO store</a>.</li>
+<li><em>Microsoft AD Directory</em> — <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-identity-source-ad.html" target="_blank" rel="noopener noreferrer">Connect your Microsoft AD Directory with AWS SSO</a>.</li>
+<li><em>OKTA Directory</em> — <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/okta-idp.html#okta-step2" target="_blank" rel="noopener noreferrer">Connecting with OKTA user directory</a>.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="step-3-assigning-sso-access-to-aws-accounts-and-applications">Step 3: Assigning SSO access to AWS Accounts and Applications<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#step-3-assigning-sso-access-to-aws-accounts-and-applications" class="hash-link" aria-label="Direct link to Step 3: Assigning SSO access to AWS Accounts and Applications" title="Direct link to Step 3: Assigning SSO access to AWS Accounts and Applications">​</a></h4>
+<p>The AWS SSO provides authorized users with personalized <em>user portal</em> access to several <em>AWS Accounts</em> or <em>Applications</em>, using their credentials that were set up in AWS SSO.</p>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="aws-accounts">AWS Accounts:<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#aws-accounts" class="hash-link" aria-label="Direct link to AWS Accounts:" title="Direct link to AWS Accounts:">​</a></h5>
+<ol>
+<li>Inside the <a href="https://console.aws.amazon.com/singlesignon" target="_blank" rel="noopener noreferrer">AWS SSO</a> console, Click on AWS Accounts.</li>
+<li>Click <em>“Assign users”</em> to add a list of users to specific AWS accounts that they can access using their AWS SSO credentials.</li>
+<li>Create permissions set in the permissions tab. A <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html" target="_blank" rel="noopener noreferrer">permission set</a> is a set of permissions that can be assigned to <em>users or groups</em>.</li>
+</ol>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="aws-applications">AWS Applications:<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#aws-applications" class="hash-link" aria-label="Direct link to AWS Applications:" title="Direct link to AWS Applications:">​</a></h5>
+<ol>
+<li>
+<p>In the <a href="https://console.aws.amazon.com/singlesignon" target="_blank" rel="noopener noreferrer">AWS SSO</a> console, choose <em>Applications</em> in the left navigation pane.</p>
+</li>
+<li>
+<p>Select your desired application in the list.</p>
+</li>
+<li>
+<p>Choose Actions, and then choose either Disable or Enable.</p>
+</li>
+</ol>
+<h5 class="anchor anchorWithStickyNavbar_LWe7" id="other-business-applications">Other Business Applications:<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#other-business-applications" class="hash-link" aria-label="Direct link to Other Business Applications:" title="Direct link to Other Business Applications:">​</a></h5>
+<p>The AWS SSO not only works with AWS Applications but also with other business’ cloud applications. A detailed guide for setting up AWS SSO credentials for those applications from other businesses can be found here. <a href="https://docs.aws.amazon.com/singlesignon/latest/userguide/saasapps.html#saasapps-addconfigapp" target="_blank" rel="noopener noreferrer">Click to learn more</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="aws-sso--iam">AWS SSO + IAM<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#aws-sso--iam" class="hash-link" aria-label="Direct link to AWS SSO + IAM" title="Direct link to AWS SSO + IAM">​</a></h3>
+<p>When getting started with AWS, we start by creating an AWS Account. In that account, we first create an organization, and under that organization, we create one or more AWS user accounts. There is not much to worry about when there is just you and a friend, but in the case of a company, you will have many employees to be given access to AWS. So, you create IAM roles and permissions for several users and group them based on their type of job or department, etc. At the end of the day, you end up with many IAM roles and permissions for every single account added to the organization. It can indeed get complicated in handling the users and the IAM configuration. That’s one of the main reasons for AWS to come up with AWS SSO.</p>
+<p>AWS SSO eliminates the work of managing users with IAM permissions by giving access to the users to handle their accounts. In SSO, all you have to do is to add the user to the AWS SSO directory and assign to them the required permissions. Then the users can log in to their accounts through the SSO user portal without any hassle.</p>
+<p>From a security standpoint, when you have to assign IAM permissions to a user, you have to go to the specific user and alter their permissions or roles. When a user has to access something from another account, which is typically called cross-account access, the administrator has to give access permission to every AWS account. As long as it goes smoothly we don’t have a problem. The security of the sensitive components in the cloud is at stake when excessive permissions are assigned to undesignated personnel in the company. But in the case of AWS SSO, you can manage the users in groups all in one place and can be confident that the right person has the right access permissions without having to worry about things going wrong. Dealing with each user individually and assigning IAM permissions is what stands out in the case of SSO.</p>
+<p>Let’s imagine a case where we have a user called Chloe. Now Chloe has access to her account ‘X’. She wants to access an S3 bucket that resides in another account, say ‘Y’. Now she has to assume a role that was assigned to her, which grants access to S3 service alone from her account ‘X’ and access the bucket in account ‘Y’. This role gives temporary credentials to Chloe with which she can access the S3 bucket in account ‘Y’. This is the main source of the pain because the administrator needs to deploy and manage many policies and roles across the AWS accounts.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="conclusion">Conclusion<a href="https://docs.sibisaravanan.com/blog/aws-single-sign-on-sso#conclusion" class="hash-link" aria-label="Direct link to Conclusion" title="Direct link to Conclusion">​</a></h3>
+<p>The SSO eliminates all these knick-knacks-looking jobs of configuring IAM access to users and makes it easy to handle user access management all in one place. It also eliminates the fear of security breaches from misconfigured IAM permissions and roles and the combination of AWS SSO and IAM just makes life easier in the world of AWS user management.</p>]]></content>
         <author>
             <name>Sibi saravanan</name>
             <uri>https://github.com/sibisaravanan</uri>
